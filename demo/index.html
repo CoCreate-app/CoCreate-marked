@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Marked | CoCreateJS</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" />
+        <style>
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content" class="markdown-body"></div>
+        <textarea input-previous input-attribute="value"></textarea>
+        <textarea marked="" marked-previous>
+# This is a heading
+
+Here is some regular text.
+
+\`\`\`javascript
+console.log('Hello, world!');
+\`\`\`
+
+\`\`\`html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>
+\`\`\`
+
+\`\`\`css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+h1 {
+    color: #333;
+}
+\`\`\`
+
+        </textarea>
+
+        <script src="../src/CoCreate-marked.js"></script>
+        <!-- <script src="./dist/CoCreate.js"></script> -->
+    </body>
+</html>
