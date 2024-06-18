@@ -4,9 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Marked | CoCreateJS</title>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" />
         <style>
             .markdown-body {
                 box-sizing: border-box;
@@ -19,8 +16,17 @@
     </head>
     <body>
         <div id="content" class="markdown-body"></div>
-        <textarea input-previous input-attribute="value"></textarea>
-        <textarea marked="" marked-previous>
+        <!-- <textarea input-previous input-attribute="value"></textarea> -->
+        <textarea
+            id="input"
+            marked
+            marked-previous
+            input-previous
+            input-attribute="value"></textarea>
+
+        <!-- <script src="./dist/CoCreate.js"></script> -->
+        <script>
+            const markdown = `
 # This is a heading
 
 Here is some regular text.
@@ -33,30 +39,34 @@ console.log('Hello, world!');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Example</title>
+ <meta charset="UTF-8">
+ <title>Example</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+ <h1>Hello World</h1>
 </body>
 </html>
 \`\`\`
 
 \`\`\`css
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 20px;
+ background-color: #f4f4f4;
 }
 h1 {
-    color: #333;
+ color: #333;
 }
 \`\`\`
-
-        </textarea>
-
-        <script src="../src/CoCreate-marked.js"></script>
-        <!-- <script src="./dist/CoCreate.js"></script> -->
+`;
+            let element = document.getElementById("input");
+            element.value = markdown;
+        </script>
+        <!-- <script src="../dist/CoCreate-marked.js"></script> -->
+        <script src="../../../CoCreateJS/dist/CoCreate.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" />
     </body>
 </html>
