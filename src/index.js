@@ -1,47 +1,70 @@
 import { marked } from 'marked';
+import elementPrototype from '@cocreate/element-prototype';
+import { queryElements } from '@cocreate/utils';
+import Actions from '@cocreate/actions';
+import Observer from '@cocreate/observer';
 import Prism from "@cocreate/prism"
+import 'github-markdown-css/github-markdown.css';
 
-
-const markdown = `
-# This is a heading
-
-Here is some regular text.
-
-\`\`\`javascript
-console.log('Hello, world!');
-\`\`\`
-
-\`\`\`html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Example</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
-</html>
-\`\`\`
-
-\`\`\`css
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+function init(elements) {
+    if (elements && !Array.isArray(elements) && !(elements instanceof HTMLCollection) && !(elements instanceof NodeList))
+        elements = [elements]
+    if (!elements)
+        elements = document.querySelectorAll('[marked], [marked-selector], [marked-closest], [marked-parent], [marked-next], [marked-previous]');
+    for (let element of elements) {
+        initElement(element);
+    }
 }
-h1 {
-    color: #333;
+
+function initElement(element) {
+    element.getValue = () => {
+        return marked.parse(elementPrototype.getValue(element));
+    }
+
+    const htmlContent = element.getValue()
+    let targets = queryElements({ element, prefix: 'marked' });
+    if (targets)
+        setHtml(targets, htmlContent)
 }
-\`\`\`
-`;
 
-// Convert markdown to HTML using marked
-const htmlContent = marked.parse(markdown);
+function setHtml(elements, htmlContent) {
+    for (let element of elements) {
+        element.setValue = (value) => {
+            elementPrototype.setValue(element, value)
+            Prism.highlightAll();
+        }
 
-// Set the converted HTML content
-// document.getElementById('content').innerHTML = htmlContent;
+        element.setValue(htmlContent)
+    }
+    Prism.highlightAll();
+}
 
-// Highlight code blocks using Prism.js
-Prism.highlightAll();
+Actions.init({
+    name: "marked",
+    endEvent: "marked",
+    callback: (action) => {
+        // TODO: markedAction
+    }
+});
+
+Observer.init({
+    name: 'CoCreateMarkedAddedNodes',
+    observe: ['addedNodes'],
+    target: '[marked]',
+    callback: function (mutation) {
+        init(mutation.target)
+    }
+})
+
+Observer.init({
+    name: 'CoCreateMarkedAttributes',
+    observe: ['attributes'],
+    attributeName: ['storage', 'database', 'array', 'index', 'object', 'key'],
+    // target: selector, // blocks mutations when applied
+    callback: function (mutation) {
+
+    }
+});
+
+
+init()
