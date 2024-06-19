@@ -5,6 +5,7 @@ import Actions from '@cocreate/actions';
 import Observer from '@cocreate/observer';
 import Prism from "@cocreate/prism"
 import 'github-markdown-css/github-markdown.css';
+import './index.css';
 
 function init(elements) {
     if (elements && !Array.isArray(elements) && !(elements instanceof HTMLCollection) && !(elements instanceof NodeList))
