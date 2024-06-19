@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.1.0...v1.1.1) (2024-06-19)
+
+
+### Bug Fixes
+
+* inherit background and color for rendered markdown ([fbd59a2](https://github.com/CoCreate-app/CoCreate-marked/commit/fbd59a20af1f3d2f96a91812562c6b69c4c7238c))
+* removed removed github-mardown css as its now bundled ([be5ab92](https://github.com/CoCreate-app/CoCreate-marked/commit/be5ab922e13a9dbd083314f1a8d1961e3cac1d39))
+
 # [1.1.0](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.0.0...v1.1.0) (2024-06-18)
 
 
