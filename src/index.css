@@ -17,3 +17,7 @@
         --bgColor-default: inherit;
     }
 }
+
+.markdown-body[contenteditable]{
+    min-height: 24px;
+}
