@@ -15,6 +15,13 @@ function init(elements) {
     for (let element of elements) {
         initElement(element);
     }
+
+    const markdownBody = document.querySelector('.markdown-body');
+    if (markdownBody) {
+        markdownBody.addEventListener('input', function (event) {
+            Prism.highlightAll();
+        });
+    }
 }
 
 function initElement(element) {
