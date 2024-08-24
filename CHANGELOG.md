@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.1.2...v1.1.3) (2024-08-24)
+
+
+### Bug Fixes
+
+* add input event to firte prism.highlightall ([d975ec2](https://github.com/CoCreate-app/CoCreate-marked/commit/d975ec250d62089f907fea37a3fd20490992a947))
+
 ## [1.1.2](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.1.1...v1.1.2) (2024-06-20)
 
 
