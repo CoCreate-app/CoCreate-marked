@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.1.3...v1.1.4) (2024-09-21)
+
+
+### Bug Fixes
+
+* observe pre[class*='language-'] to initialize ([2eafcf0](https://github.com/CoCreate-app/CoCreate-marked/commit/2eafcf08fb76c34e939a7b51312a99f8d70382bf))
+
 ## [1.1.3](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.1.2...v1.1.3) (2024-08-24)
 
 
