@@ -19,18 +19,25 @@ function init(elements) {
 function initElement(element) {
     // Create a custom renderer for `marked`
     const renderer = new marked.Renderer();
-
+    const options = { renderer }
     // Override the `code` method to generate a <textarea> with type="code" instead of <pre><code>
-    renderer.code = function (code, language) {
-        // Create the textarea HTML string
-        return `<codearea><textarea type="code" lang="${code.lang}" class="code-editor" value='${code.text}' height="auto" readonly></textarea></codearea>`;
-    };
+    let codeTemplate = element.getAttribute('marked-code')
+    if (codeTemplate) {
+        renderer.code = function (code) {
+            // TODO: santize code
+            const finalTemplate = codeTemplate
+                .replace(/\$\{code\.lang\}/g, code.lang)
+                .replace(/\$\{code\.text\}/g, code.text);
+            return finalTemplate;
+
+        };
+    }
 
     // Use the custom renderer with `marked`
     element.getValue = () => {
-        const rawMarkdown = elementPrototype.getValue(element);
-        const rawCode = marked.parse(rawMarkdown, { renderer });
-        return rawCode
+        let value = elementPrototype.getValue(element) || "";
+        value = marked.parse(value, options);
+        return value
     }
 
     const htmlContent = element.getValue()
