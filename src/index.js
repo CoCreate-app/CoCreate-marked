@@ -67,7 +67,7 @@ Actions.init({
 Observer.init({
     name: 'CoCreateMarkedAddedNodes',
     observe: ['addedNodes'],
-    target: '[marked]',
+    selector: '[marked]',
     callback: function (mutation) {
         init(mutation.target)
     }
