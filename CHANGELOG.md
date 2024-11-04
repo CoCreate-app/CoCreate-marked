@@ -1,3 +1,19 @@
+# [1.2.0](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.1.4...v1.2.0) (2024-11-04)
+
+
+### Bug Fixes
+
+* observer taget has been renamed to selector ([26bf5fd](https://github.com/CoCreate-app/CoCreate-marked/commit/26bf5fdeae81325feb500992d4d36573558f15da))
+* pretier.config.js and file formating ([6b8d8d9](https://github.com/CoCreate-app/CoCreate-marked/commit/6b8d8d9411565924c047e5807aee4736d78e5aa6))
+
+
+### Features
+
+* add prettier.config.js and format files ([bab2cbf](https://github.com/CoCreate-app/CoCreate-marked/commit/bab2cbf3d53dc4963f51ded7db4d776b7edbe3fb))
+* add prettier.config.js and format files ([b2e1a63](https://github.com/CoCreate-app/CoCreate-marked/commit/b2e1a63ad3fd48949bcce4e7f92a34242e83bd8f))
+* define rendered code from attribute marked-code ([c984dc6](https://github.com/CoCreate-app/CoCreate-marked/commit/c984dc6e288c4e3ae68bc956994032c8b04a9de8))
+* pass render object to handle rendering code ([4dc0b97](https://github.com/CoCreate-app/CoCreate-marked/commit/4dc0b97ac8e8ac3ef3883999bddd135fbf1860c5))
+
 ## [1.1.4](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.1.3...v1.1.4) (2024-09-21)
 
 
