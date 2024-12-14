@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.2.0...v1.3.0) (2024-12-14)
+
+
+### Features
+
+* santize code string prior to setting in value attribute ([4153568](https://github.com/CoCreate-app/CoCreate-marked/commit/415356844573cd4dfa6a1bb59dd92d66cbb4cf45))
+
 # [1.2.0](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.1.4...v1.2.0) (2024-11-04)
 
 
