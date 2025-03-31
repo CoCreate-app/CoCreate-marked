@@ -80,7 +80,7 @@ Actions.init({
 
 Observer.init({
 	name: "CoCreateMarkedAddedNodes",
-	observe: ["addedNodes"],
+	types: ["addedNodes"],
 	selector: "[marked]",
 	callback: function (mutation) {
 		init(mutation.target);
@@ -89,8 +89,8 @@ Observer.init({
 
 Observer.init({
 	name: "CoCreateMarkedAttributes",
-	observe: ["attributes"],
-	attributeName: ["storage", "database", "array", "index", "object", "key"],
+	types: ["attributes"],
+	attributeFilter: ["storage", "database", "array", "index", "object", "key"],
 	// target: selector, // blocks mutations when applied
 	callback: function (mutation) {}
 });
