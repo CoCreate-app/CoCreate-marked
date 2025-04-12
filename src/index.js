@@ -15,9 +15,7 @@ function init(elements) {
 	)
 		elements = [elements];
 	if (!elements)
-		elements = document.querySelectorAll(
-			"[marked], [marked-selector], [marked-closest], [marked-parent], [marked-next], [marked-previous]"
-		);
+		elements = document.querySelectorAll("[marked], [marked-query]");
 	for (let element of elements) {
 		initElement(element);
 	}
@@ -48,7 +46,7 @@ function initElement(element) {
 
 	const htmlContent = element.getValue();
 	let targets = queryElements({ element, prefix: "marked" });
-	if (targets) setHtml(targets, htmlContent);
+	if (targets.length) setHtml(targets, htmlContent);
 }
 
 function setHtml(elements, htmlContent) {

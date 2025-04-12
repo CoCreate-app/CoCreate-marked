@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Marked | CoCreateJS</title>
-        <style>
-            .markdown-body {
-                box-sizing: border-box;
-                min-width: 200px;
-                max-width: 980px;
-                margin: 0 auto;
-                padding: 45px;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="content" class="markdown-body"></div>
-        <!-- <textarea input-previous input-attribute="value"></textarea> -->
-        <textarea
-            id="input"
-            marked
-            marked-previous
-            input-previous
-            input-attribute="value"></textarea>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Marked | CoCreateJS</title>
+		<style>
+			.markdown-body {
+				box-sizing: border-box;
+				min-width: 200px;
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 45px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content" class="markdown-body"></div>
+		<!-- <textarea input-query="$previous" input-attribute="value"></textarea> -->
+		<textarea
+			id="input"
+			marked
+			marked-query="$previous"
+			input-query="$previous"
+			input-attribute="value"></textarea>
 
-        <!-- <script src="./dist/CoCreate.js"></script> -->
-        <script>
-            const markdown = `
+		<!-- <script src="./dist/CoCreate.js"></script> -->
+		<script>
+			const markdown = `
 # This is a heading
 
 Here is some regular text.
@@ -60,10 +60,10 @@ h1 {
 }
 \`\`\`
 `;
-            let element = document.getElementById("input");
-            element.value = markdown;
-        </script>
-        <!-- <script src="../dist/CoCreate-marked.js"></script> -->
-        <script src="../../../CoCreateJS/dist/CoCreate.js"></script>
-    </body>
+			let element = document.getElementById("input");
+			element.value = markdown;
+		</script>
+		<!-- <script src="../dist/CoCreate-marked.js"></script> -->
+		<script src="../../../CoCreateJS/dist/CoCreate.js"></script>
+	</body>
 </html>
