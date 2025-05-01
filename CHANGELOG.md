@@ -1,3 +1,13 @@
+## [1.3.2](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.3.1...v1.3.2) (2025-05-01)
+
+
+### Bug Fixes
+
+* added css-loader ([90c117e](https://github.com/CoCreate-app/CoCreate-marked/commit/90c117e6da817ea725c7ad880916aa46c5d9edd2))
+* update [@cocreate](https://github.com/cocreate) dependencies ([ccc3972](https://github.com/CoCreate-app/CoCreate-marked/commit/ccc3972b121f99bbef7f02a6e247551503da24ff))
+* update query attributes ([72d36fa](https://github.com/CoCreate-app/CoCreate-marked/commit/72d36fac95524f1ebb1f97c36104a53446e24cc3))
+* updated cocreate modules versions ([c41dce1](https://github.com/CoCreate-app/CoCreate-marked/commit/c41dce1c76ba8c44d9afef48b2968448a0a0b580))
+
 ## [1.3.1](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.3.0...v1.3.1) (2025-04-11)
 
 
