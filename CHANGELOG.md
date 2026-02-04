@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.3.2...v1.3.3) (2026-02-04)
+
+
+### Bug Fixes
+
+* update worklow ([024204e](https://github.com/CoCreate-app/CoCreate-marked/commit/024204e7387744c2d82113ffb0dd8bdb33310e9a))
+
 ## [1.3.2](https://github.com/CoCreate-app/CoCreate-marked/compare/v1.3.1...v1.3.2) (2025-05-01)
 
 
